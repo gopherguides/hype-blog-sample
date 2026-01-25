@@ -5,7 +5,7 @@ author:
   name: "Gopher Guides"
   email: "info@gopherguides.com"
   twitter: "@gopaborgs"
-theme: "github"
+theme: "suspended"
 highlight:
   style: "monokai"
   lineNumbers: false
