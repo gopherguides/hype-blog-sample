@@ -1,0 +1,16 @@
+title: "Hype Blog Sample"
+description: "A sample blog demonstrating the hype static site generator"
+baseURL: "https://gopherguides.github.io/hype-blog-sample"
+author:
+  name: "Gopher Guides"
+  email: "info@gopherguides.com"
+  twitter: "@gopaborgs"
+theme: "github"
+highlight:
+  style: "monokai"
+  lineNumbers: false
+seo:
+  ogImage: "/images/og-default.png"
+  twitterCard: "summary_large_image"
+contentDir: "content"
+outputDir: "public"
