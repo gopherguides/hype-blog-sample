@@ -22,10 +22,20 @@ A sample blog demonstrating the [hype](https://github.com/gopherguides/hype) sta
 
 4. Preview locally:
    ```bash
-   cd public && python3 -m http.server 8080
+   hype blog serve
    ```
 
-5. Open http://localhost:8080 in your browser
+5. Open http://localhost:3000 in your browser
+
+## Development with Live Reload
+
+Use watch mode to automatically rebuild when files change:
+
+```bash
+hype blog serve -watch
+```
+
+This watches `content/`, `static/`, and `config.yaml` for changes and rebuilds automatically.
 
 ## Project Structure
 
@@ -38,7 +48,7 @@ hype-blog-sample/
 │   ├── bash-oneliners/     # Bash examples
 │   └── tech-documentation/ # Non-technical article
 ├── static/                  # Static assets
-│   └── images/
+│   └── favicon.svg
 └── .github/workflows/       # GitHub Actions deployment
     └── deploy.yml
 ```
@@ -75,12 +85,23 @@ Your content here...
 
 ## Features
 
+- **Live Development**: `hype blog serve -watch` rebuilds on file changes
 - **SEO**: OpenGraph, Twitter Cards, JSON-LD structured data
-- **Syntax Highlighting**: Chroma with monokai theme
+- **Syntax Highlighting**: Chroma with monokai theme + copy-to-clipboard
 - **RSS Feed**: Available at `/rss.xml`
 - **Sitemap**: Generated at `/sitemap.xml`
 - **Dark Mode**: Automatic based on system preference
 - **Mobile Responsive**: Tailwind CSS design
+
+## CLI Commands
+
+| Command | Description |
+|---------|-------------|
+| `hype blog init <name>` | Create a new blog project |
+| `hype blog build` | Build static site to `public/` |
+| `hype blog serve` | Preview at localhost:3000 |
+| `hype blog serve -watch` | Preview with auto-rebuild on changes |
+| `hype blog new <slug>` | Create new article scaffold |
 
 ## Deployment
 
